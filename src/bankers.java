@@ -2,9 +2,10 @@ import java.util.Arrays;
 public class bankers
 {
     private int procK	,resK;
-    private int need[][]	,allocate[][]	,max[][]	,avail[] ;
+    private int need[][]	,allocate[][]	,max[][];
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
+
 	public bankers	(int alloc0[][]
     		,int max0[][]
     		)

@@ -4,13 +4,20 @@ import java.util.Random ;
 
 public class bankersDriver 
 {			
+	@SuppressWarnings("unused")
+	private	static int	avail[] =	
+		{4	// CPU
+		,12	// memory
+		,10	// I/O
+	};
+	
 	public static void main(String args[]) 	
 	{
 		Random random__X	= new Random();
 		int QREADY__T = 5 ;	final int mem__T = 256;
 		
 		LinkedList<PCB> QReady	= new LinkedList<PCB>();	//#0010 Create List QReady
-				
+					
 		PCB PCB_Ready	; 	//#0040 Create the field: PCB_Ready
 		@SuppressWarnings("unused")
 		CPU_event ce	= new CPU_event();
@@ -26,7 +33,9 @@ public class bankersDriver
 			System.out.printf("%s\n"	,loopI.showPCB()) ;
 		System.out.println("");
 		
-		Collections.sort(QReady, new comparator_by_CPU_left());
+		//	build arrays for alloc and max for each process
+		
+/*		Collections.sort(QReady, new comparator_by_CPU_left());
 		
 		for (PCB loopI : QReady)
 			System.out.printf("@CPUleft\t%s\n"	,loopI.showPCB()) ;		
@@ -52,6 +61,7 @@ public class bankersDriver
 		Collections.shuffle(QReady, random__X);
 		for (PCB loopI : QReady)
 			System.out.printf("%s\n"	,loopI.showPCB()) ;
+*/
 		
 		//	End of Initialization \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\				
 	}
